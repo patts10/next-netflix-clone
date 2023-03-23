@@ -8,7 +8,7 @@ interface InputProp {
   type?: string
 }
 
-export const Input: React.FC<InputProp> = ({
+const Input: React.FC<InputProp> = ({
   id,
   onChange,
   value,
@@ -64,3 +64,5 @@ export const Input: React.FC<InputProp> = ({
     </div>
   )
 }
+
+export default Input
