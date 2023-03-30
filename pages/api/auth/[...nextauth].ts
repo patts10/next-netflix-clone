@@ -7,7 +7,7 @@ import GoogleProvider from 'next-auth/providers/google'
 
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 
-import prismadb from '@/lib/prismadb'
+import prismadb from '../../../libs/prismadb'
 
 export default NextAuth({
   providers: [
@@ -55,9 +55,6 @@ export default NextAuth({
         if (!isCorrectPassword) {
           throw new Error('Incorrect password')
         }
-        console.log(user)
-        console.log({ isCorrectPassword: isCorrectPassword })
-
         return user
       }
     })
