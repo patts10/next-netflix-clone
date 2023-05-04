@@ -37,7 +37,7 @@ export default NextAuth({
           throw new Error('Email and password required')
         }
 
-        const user = await prismadb.user.findUnique({
+        const user: any = await prismadb.user.findUnique({
           where: {
             email: credentials.email
           }
